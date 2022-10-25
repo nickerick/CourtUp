@@ -1,0 +1,24 @@
+2022-10-24 00:45:30.535  INFO 16300 --- [main] b.courtupapi.CourtUpApiApplication       : Starting CourtUpApiApplication using Java 1.8.0_352 on nicke-laptop with PID 16300 (C:\Users\nicke\OneDrive\Desktop\Development\CourtUp\backend\CourtUpAPI\target\classes started by nicke in C:\Users\nicke\OneDrive\Desktop\Development\CourtUp\backend\CourtUpAPI)
+2022-10-24 00:45:30.538  INFO 16300 --- [main] b.courtupapi.CourtUpApiApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-10-24 00:45:31.028  INFO 16300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-24 00:45:31.060  INFO 16300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JPA repository interfaces.
+2022-10-24 00:45:31.436  INFO 16300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-24 00:45:31.443  INFO 16300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 00:45:31.443  INFO 16300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-10-24 00:45:31.543  INFO 16300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-24 00:45:31.543  INFO 16300 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
+2022-10-24 00:45:31.711  INFO 16300 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-24 00:45:31.748  INFO 16300 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-10-24 00:45:31.901  INFO 16300 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-24 00:45:32.019  INFO 16300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-24 00:45:32.310  INFO 16300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-24 00:45:32.329  INFO 16300 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-10-24 00:45:32.797  INFO 16300 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-24 00:45:32.807  INFO 16300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 00:45:32.837  WARN 16300 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 00:45:33.152  INFO 16300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-24 00:45:33.160  INFO 16300 --- [main] b.courtupapi.CourtUpApiApplication       : Started CourtUpApiApplication in 3.035 seconds (JVM running for 3.682)
+2022-10-24 10:56:55.209  WARN 16300 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10h56s949ms241µs900ns).
+2022-10-24 11:15:09.286  INFO 16300 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 11:15:09.288  INFO 16300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-24 11:15:09.298  INFO 16300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

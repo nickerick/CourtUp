@@ -1,8 +1,9 @@
+import HomeBody from "./HomeBody";
 
 function HomePage(props) {
     return (
         <div>
-            Page
+            <HomeBody /> 
         </div>
     )
 }

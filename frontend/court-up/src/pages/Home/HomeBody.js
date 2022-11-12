@@ -3,3 +3,5 @@ function HomeBody(props) {
         <div> body</div>
     )
 }
+
+export default HomeBody;

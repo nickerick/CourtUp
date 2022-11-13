@@ -38,11 +38,15 @@ public class UserController  {
 
     @PostMapping("/user/login")
     public ResponseEntity<String> login(@RequestBody UserAccessForm userAccessForm) {
-        if (userRepository.findByEmail(userAccessForm.getEmail()) == null) {
+        User requestedUser = userRepository.findByEmail(userAccessForm.getEmail());
+
+        if (requestedUser == null) {
             return new ResponseEntity<>("Invalid Credentials", HttpStatus.UNAUTHORIZED);
         }
-        
 
+        if (!PasswordUtility.comparePasswords(requestedUser.getPassword(), requestedUser.getPassSalt(), userAccessForm.getPassword())) {
+            return new ResponseEntity<>("Invalid pas", HttpStatus.UNAUTHORIZED);
+        }
 
         return new ResponseEntity<>("trah", HttpStatus.OK);
     }

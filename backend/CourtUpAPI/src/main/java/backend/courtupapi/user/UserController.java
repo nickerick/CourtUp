@@ -27,12 +27,13 @@ public class UserController  {
             return new ResponseEntity<>("Missing fields.", HttpStatus.BAD_REQUEST);
         }
 
+        // Salting + Hashing password
+        String[] passwordInfo = PasswordUtility.hashPassword(userAccessForm.getPassword());
 
-
-        User newUser = new User(userAccessForm.getEmail(), userAccessForm.getUsername(), userAccessForm.getPassword(), "f");
+        User newUser = new User(userAccessForm.getEmail(), userAccessForm.getUsername(), passwordInfo[0], passwordInfo[1]);
         userRepository.save(newUser);
 
-        return new ResponseEntity<>("user " + newUser.getId() + " created", HttpStatus.OK);
+        return new ResponseEntity<>("user " + newUser.getId() + " created.", HttpStatus.OK);
     }
 
 }

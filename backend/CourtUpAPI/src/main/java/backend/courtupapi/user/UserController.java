@@ -36,4 +36,15 @@ public class UserController  {
         return new ResponseEntity<>("user " + newUser.getId() + " created.", HttpStatus.OK);
     }
 
+    @PostMapping("/user/login")
+    public ResponseEntity<String> login(@RequestBody UserAccessForm userAccessForm) {
+        if (userRepository.findByEmail(userAccessForm.getEmail()) == null) {
+            return new ResponseEntity<>("Invalid Credentials", HttpStatus.UNAUTHORIZED);
+        }
+        
+
+
+        return new ResponseEntity<>("trah", HttpStatus.OK);
+    }
+
 }

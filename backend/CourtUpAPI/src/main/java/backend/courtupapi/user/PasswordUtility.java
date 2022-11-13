@@ -1,10 +1,8 @@
 package backend.courtupapi.user;
 
 import com.google.common.hash.Hashing;
-
 import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
-import java.util.List;
 
 public class PasswordUtility {
 

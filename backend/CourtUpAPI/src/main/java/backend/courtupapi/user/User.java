@@ -23,7 +23,10 @@ public class User {
     public User() {}
 
     public User(String email, String username, String password, String passSalt) {
-
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.passSalt = passSalt;
     }
 
     public int getId() {

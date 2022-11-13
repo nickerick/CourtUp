@@ -15,6 +15,19 @@ public class UserController  {
 
     @PostMapping("/user")
     public ResponseEntity<String> createUser(@RequestBody UserAccessForm userAccessForm) {
+        if (userRepository.findByEmail(userAccessForm.getEmail()) != null) {
+            return new ResponseEntity<>("Email already exists.", HttpStatus.CONFLICT);
+        }
+
+        if (userRepository.findByUsername(userAccessForm.getUsername()) != null) {
+            return new ResponseEntity<>("Username already exists.", HttpStatus.CONFLICT);
+        }
+
+        if (userAccessForm.getEmail() == null || userAccessForm.getUsername() == null || userAccessForm.getPassword() == null) {
+            return new ResponseEntity<>("Missing fields.", HttpStatus.BAD_REQUEST);
+        }
+
+
 
         User newUser = new User(userAccessForm.getEmail(), userAccessForm.getUsername(), userAccessForm.getPassword(), "f");
         userRepository.save(newUser);

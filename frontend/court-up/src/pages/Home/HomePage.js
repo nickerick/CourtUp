@@ -7,7 +7,7 @@ function HomePage(props) {
         <div>
             <HomeNavbar />
             <Container className="PageBody">
-            <HomeBody className=''/>
+            <HomeBody/>
             </Container>
         </div>
     )

@@ -41,6 +41,10 @@
     color: var(--text-1);
 }
 
+.Link:focus{
+    color: var(--accent-1);
+}
+
 .Link{
     padding: 0px 20px;
     color: var(--accent-1);
@@ -51,6 +55,11 @@
     background: var(--accent-1);
     border: none;
     margin: 0px 20px;
+}
+
+.btnNav:active{
+    background-color: var(--text-1) !important;
+    color: var(--background) !important;
 }
 
 .btnNav:hover{

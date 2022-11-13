@@ -52,16 +52,18 @@
     border: none;
 }
 
-.btnHomeBody:hover{
-    color: var(--background);
+
+.btnHomeBody:active{
+    background-color: var(--text-1) !important;
+    color: var(--background) !important;
 }
 
 .btnHomePrimary:hover{
-    background: var(--accent-3);
+    background-color: var(--accent-3);
 }
 
 .btnHomeSecondary:hover{
-    background: var(--accent-4);
+    background-color: var(--accent-4);
 }
 
 .PageBody{

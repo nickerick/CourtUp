@@ -1,9 +1,14 @@
+import { Container } from "react-bootstrap";
+import HomeNavbar from "../../components/NavBar/HomeNavbar";
 import HomeBody from "./HomeBody";
 
 function HomePage(props) {
     return (
         <div>
-            <HomeBody />
+            <HomeNavbar />
+            <Container className="PageBody">
+            <HomeBody className=''/>
+            </Container>
         </div>
     )
 }

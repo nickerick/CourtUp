@@ -1,28 +1,33 @@
 :root{
     --accent-1: #FF5814;
     --accent-2: #565656;
+    --accent-3: #d54912;
+    --accent-4: #484848;
     --text-1: #FFFFFF;
     --background: #1B1B1B;
 }
 
 .HomeBody{
     color: var(--text-1);
+    border: none; 
+    align-items: center;
 }
 
 .Card{
     background-color: var(--background);
-    width: 1195px;
-    height: 776px;
     border-radius: 23px;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 1000px;
+    height: 700px;
+    margin: 50px 0;
 }
 
 .CardTitle{
     color: var(--accent-1);
-    font-size: 128px !important;
+    font-size: 128px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,21 +38,35 @@
     font-family: Average;
 }
 
-.btnPrimary{
-    background-color: var(--accent-1) !important; 
+.btnHomePrimary{
+    background-color: var(--accent-1); 
 }
 
-.btnSecondary{
-    background-color: var(--accent-2) !important;
+.btnHomeSecondary{
+    background-color: var(--accent-2);
 }
 
-.btn{
-    color: var(--text-1) !important;
-    width: 665px !important;
-    border: var(--background) !important;
+.btnHomeBody{
+    color: var(--text-1) ;
+    width: 665px;
+    border: none;
 }
 
-.btn:hover{
-    color: var(--background)!important;
+
+.btnHomeBody:active{
+    background-color: var(--text-1) !important;
+    color: var(--background) !important;
 }
 
+.btnHomePrimary:hover{
+    background-color: var(--accent-3);
+}
+
+.btnHomeSecondary:hover{
+    background-color: var(--accent-4);
+}
+
+.PageBody{
+    display: flex;
+    flex-direction: column;
+}

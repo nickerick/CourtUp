@@ -1,0 +1,71 @@
+:root{
+    --accent-1: #FF5814;
+    --accent-2: #565656;
+    --accent-3: #d54912;
+    --accent-4: #484848;
+    --text-1: #FFFFFF;
+    --background: #1B1B1B;
+}
+
+.HomeNavbar{
+    background-color: var(--background);
+    justify-content: space-between;
+}
+
+.NavLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.NavBrand{
+    color: var(--text-1);
+    font-family: Average;
+}
+
+.NavBrand:hover{
+    color: var(--text-1);
+}
+
+.NavBrand img{
+    height: 25px;
+    margin: 10px;
+} 
+
+.NavLinks{
+    display: flex;
+}
+
+.NavLinks:hover{
+    color: var(--text-1);
+}
+
+.Link:focus{
+    color: var(--accent-1);
+}
+
+.Link{
+    padding: 0px 20px;
+    color: var(--accent-1);
+}
+
+.btnNav{ 
+    width: 100px;
+    background: var(--accent-1);
+    border: none;
+    margin: 0px 20px;
+}
+
+.btnNav:active{
+    background-color: var(--text-1) !important;
+    color: var(--background) !important;
+}
+
+.btnNav:hover{
+    background: var(--accent-3);
+    color: var(--background);
+}
+
+
+

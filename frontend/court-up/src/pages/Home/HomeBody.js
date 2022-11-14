@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './Home.css';
 
+
 function HomeBody(props) {
     return (
         
@@ -11,10 +12,10 @@ function HomeBody(props) {
                     <Card.Text className='my-5'>
                     Find, rate, and play at basketball courts across the globe!
                     </Card.Text>
-                    <Button  className='btnPrimary btn mt-5 mb-2'> Courts Near Me</Button>
-                    <Button  className= 'btnSecondary btn my-2 '>Search Courts</Button>
+                    <Button  className='btnHomePrimary btnHomeBody mt-5 mb-2'> Courts Near Me</Button>
+                    <Button  className= 'btnHomeSecondary btnHomeBody my-2 '>Search Courts</Button>
                 </Card.Body>
-                </Card> 
+                </Card>
     )
 }
 

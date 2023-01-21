@@ -9,7 +9,7 @@ function HomeNavbar(props) {
         <Navbar className='HomeNavbar sticky-top' >
             <div className='NavLeft'>
             <Navbar.Brand className='NavBrand' href="https://gabepederson.com">
-                <img src="courtup-logo.png" alt="CourtUp Logo" />CourtUp
+                <img src="../../courtup-logo.png" alt="CourtUp Logo" />CourtUp
             </Navbar.Brand>
                 <Container className='NavLinks'>
                     <Nav.Link className='Link' href="#action1">Support</Nav.Link>

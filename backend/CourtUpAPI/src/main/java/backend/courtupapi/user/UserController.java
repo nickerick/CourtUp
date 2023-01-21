@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class UserController  {
@@ -48,7 +49,7 @@ public class UserController  {
             return new ResponseEntity<>("Invalid pas", HttpStatus.UNAUTHORIZED);
         }
 
-        return new ResponseEntity<>("trah", HttpStatus.OK);
+        return new ResponseEntity<>("{\"msg\": \"bruh\"}", HttpStatus.OK);
     }
 
 }

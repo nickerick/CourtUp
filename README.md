@@ -11,7 +11,7 @@
   <p align="center">
     Find and rate basketball courts across the globe!
     <br />
-    <a href="https://github.com/nickerick/CourtUp"><strong>Visit CourtUp »</strong></a>
+    <a href="https://courtup-frontend.herokuapp.com/"><strong>Visit CourtUp »</strong></a>
     <br />
     <br />
     <a href="https://github.com/nickerick/CourtUp/issues">Report Bug</a>

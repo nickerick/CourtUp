@@ -1,4 +1,4 @@
-name: CI/CD
+name: Build Artifact
 
 on:
   push:
@@ -16,30 +16,39 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - name: Checkout repository
+    - name: Clone Github Repo
       uses: actions/checkout@v2
 
-    - name: Set up Node.js ${{ matrix.node-version }}
+    - name: Install Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
+    - name: Install NPM Dependencies & Create Frontend Build
       working-directory: ./frontend/court-up
       run: |
         npm install
         npm run build
         
-    - name: Copy frontend buidl to spring boot static
+    - name: Copy Frontend Build To Backend Static Files
       run: |
         cd backend/CourtUpAPI/src/main/resources/
         mkdir static
         cd ../../../../../
         cp -R ./frontend/court-up/build/* ./backend/CourtUpAPI/src/main/resources/static/
         
-    - name: Step 3 - Use the Upload Artifact GitHub Action
+    - name: Install Java 8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 8
+
+    - name: Build Backend with Maven
+      working-directory: ./backend/CourtUpAPI/
+      run: mvn -B package --file pom.xml
+      
+    - name: Upload Artifact To Github
       uses: actions/upload-artifact@v2
       with: 
-        name: assets-for-download
-        path: ./backend/CourtUpAPI/src/main/resources/static/
+        name: courtup-build
+        path: ./backend/CourtUpAPI/target/
         

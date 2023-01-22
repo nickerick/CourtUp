@@ -10,7 +10,7 @@ function HomeBody(props) {
     const [testMsg, setTestMsg] = useState('yo');
 
     const testDb = async () => {
-        const response = await fetch(`http://localhost:8080/user/login`, {
+        const response = await fetch(`/api/user/login`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*'},
             body: JSON.stringify({email: 'nickerickpoopface', password: 'password'})

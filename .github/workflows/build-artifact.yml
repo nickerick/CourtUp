@@ -43,19 +43,7 @@ jobs:
         rm application.properties
         touch application.properties
         
-        echo spring.datasource.url=${{ secrets.COURTUP_DB_CONNECTION }} >> .application.properties
-        echo spring.datasource.username=${{ secrets.COURTUP_DB_USERNAME }} >> .application.properties
-        echo spring.datasource.password=${{ secrets.COURTUP_DB_PASSWORD }} >> .application.properties
-        echo spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver >> .application.properties
-
-        echo spring.jpa.hibernate.ddl-auto=update >> .application.properties
-        echo spring.jpa.properties.hibernate.show_sql=true >> .application.properties
-
-        echo server.port=${PORT:8080} >> .application.properties
-        echo server.servlet.context-path=/ >> .application.properties
-        echo logging.file.name=application.log >> .application.properties
-        echo logging.level.org.springFramework=DEBUG >> .application.properties
-        
+        echo "${{ secrets.COURTUP_APPLICATION_PROPERTIES }}" > application.properties
         cat application.properties
         
     - name: Install Java 8

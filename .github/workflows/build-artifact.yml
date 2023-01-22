@@ -40,9 +40,7 @@ jobs:
     - name: Inject Environment Variables
       working-directory: ./backend/CourtUpAPI/src/main/resources/
       run: |
-        sed -i 's/${COURTUP_DB_CONNECTION}/${{ secrets.COURTUP_DB_CONNECTION }}/g' application.properties
-        sed -i 's/${COURTUP_DB_USERNAME}/${{ secrets.COURTUP_DB_USERNAME }}/g' application.properties
-        sed -i 's/${COURTUP_DB_PASSWORD}/${{ secrets.COURTUP_DB_PASSWORD }}/g' application.properties
+        echo ${{ secrets.COURTUP_DB_CONNECTION }}
         
     - name: Install Java 8
       uses: actions/setup-java@v1

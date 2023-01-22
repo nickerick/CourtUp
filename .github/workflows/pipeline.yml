@@ -1,4 +1,4 @@
-name: Build Artifact
+name: CourtUp CI/CD Pipeline
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-publish-artifact:
 
     runs-on: ubuntu-latest
 
@@ -61,11 +61,22 @@ jobs:
         name: courtup-build
         path: ./backend/CourtUpAPI/target/
     
-    - name: Upload to S3
+    - name: Upload Artifact to S3
       run: |
         aws s3 cp ./backend/CourtUpAPI/target/CourtUpAPI-0.0.1-SNAPSHOT.jar s3://courtup
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_DEFAULT_REGION: 'us-east-1'
+    
+  deploy:
+    
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - name: Clone Github Repo
+      uses: actions/checkout@v2
+      
+      
+    
         

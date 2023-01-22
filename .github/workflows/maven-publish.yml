@@ -29,9 +29,17 @@ jobs:
       run: |
         npm install
         npm run build
-
+        
+    - name: Copy frontend buidl to spring boot static
+      run: |
+        cd backend/CourtUpAPI/src/main/resources/
+        mkdir static
+        cd ../../../../../
+        cp -R ./frontend/court-up/build/* ./backend/CourtUpAPI/src/main/resources/static/
+        
     - name: Step 3 - Use the Upload Artifact GitHub Action
       uses: actions/upload-artifact@v2
       with: 
         name: assets-for-download
-        path: ./frontend/court-up/build
+        path: ./backend/CourtUpAPI/src/main/resources/static/
+        

@@ -34,5 +34,6 @@ build/
 
 #application.properties
 application.log
+application.log*
 static/
 .env

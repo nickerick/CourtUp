@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/server
+    destination: /home/ec2-user
 
 permissions:
   - object: /
@@ -13,10 +13,10 @@ permissions:
 
 hooks:
   ApplicationStart:
-    - location: server_start.sh
+    - location: scripts/server_start.sh
       timeout: 20
       runas: ec2-user
   ApplicationStop:
-    - location: server_stop.sh
+    - location: scripts/server_stop.sh
       timeout: 20
       runas: ec2-user

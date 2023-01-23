@@ -7,7 +7,7 @@ import './Home.css';
 
 function HomeBody(props) {
 
-    const [testMsg, setTestMsg] = useState('yo');
+    // const [testMsg, setTestMsg] = useState('yo');
 
     const testDb = async () => {
         const response = await fetch(`/api/user/login`, {
@@ -17,8 +17,9 @@ function HomeBody(props) {
           })
 ;
           const resp = await response.json()
+          console.log(resp);
         
-          setTestMsg(resp.msg);
+        //   setTestMsg(resp.msg);
     }
 
     return (

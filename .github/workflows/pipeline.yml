@@ -70,12 +70,21 @@ jobs:
         AWS_DEFAULT_REGION: 'us-east-1'
     
   deploy:
-    
+    needs: build-publish-artifact
     runs-on: ubuntu-latest
     
     steps: 
     - name: Clone Github Repo
       uses: actions/checkout@v2
+    
+    - name: Create CodeDeploy Deployment
+      runs: |
+        commit_hash=`git rev-parse HEAD`
+        aws deploy create-deployment --application-name CourtUp --deployment-group-name continuous-deploy-group --github-location repository=$GITHUB_REPOSITORY,commitId=$commit_hash --ignore-application-stop-failures
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_DEFAULT_REGION: 'us-east-1'
       
       
     

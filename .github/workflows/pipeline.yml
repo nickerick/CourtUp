@@ -78,7 +78,7 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Create CodeDeploy Deployment
-      runs: |
+      run: |
         commit_hash=`git rev-parse HEAD`
         aws deploy create-deployment --application-name CourtUp --deployment-group-name continuous-deploy-group --github-location repository=$GITHUB_REPOSITORY,commitId=$commit_hash --ignore-application-stop-failures
       env:

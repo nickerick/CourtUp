@@ -62,6 +62,7 @@ CourtUp is an app designed to help those who love basketball find a court near t
 
 ### Built With
 
+![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 [![React][React.js]][React-url]
 [![Bootstrap][Bootstrap.com]][Bootstrap-url]

@@ -44,7 +44,6 @@ jobs:
         touch application.properties
         
         echo "${{ secrets.COURTUP_APPLICATION_PROPERTIES }}" > application.properties
-        cat application.properties
         
     - name: Install Java 8
       uses: actions/setup-java@v1
@@ -54,12 +53,12 @@ jobs:
     - name: Build Backend with Maven
       working-directory: ./backend/CourtUpAPI/
       run: mvn -B package --file pom.xml
-      
-    - name: Upload Artifact To Github
-      uses: actions/upload-artifact@v2
-      with: 
-        name: courtup-build
-        path: ./backend/CourtUpAPI/target/
+            
+#     - name: Upload Artifact To Github
+#       uses: actions/upload-artifact@v2
+#       with: 
+#         name: courtup-build
+#         path: ./backend/CourtUpAPI/target/
     
     - name: Upload Artifact to S3
       run: |

@@ -3,4 +3,4 @@ Below are various diagrams and explanations of the architecture and flow of Cour
 
 ## Deployment
 
-[](deployment-diagram.png)
+![](deployment-diagram.png)

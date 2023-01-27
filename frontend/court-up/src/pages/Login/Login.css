@@ -1,0 +1,52 @@
+:root{
+    --accent-1: #FF5814;
+    --accent-2: #565656;
+    --accent-3: #d54912;
+    --accent-4: #484848;
+    --text-1: #FFFFFF;
+    --background: #1B1B1B;
+    --text-2: #B8b8b8;
+
+}
+
+
+
+.PageBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FormBody{
+    background-color: var(--background);
+    color: var(--text-1);
+    border-radius: 39px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    width: 620px;
+    height: 680px;
+    margin: 50px ;
+    padding: 60px 100px;
+    
+}
+
+.FormTitle{
+    color: var(--text-1);
+    font-size: 64px;
+    font-weight: 15;
+    letter-spacing: 3px;
+}
+
+.Input{
+    background-color: var(--text-2);
+}
+
+.ForgotPass{
+    color: var(--accent-1);
+}
+
+.CreateAccount{
+    color: var(--text-2);
+}

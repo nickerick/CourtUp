@@ -11,6 +11,7 @@ function LoginPage(props) {
             <div>
                  <h1 className='FormTitle'>Login</h1>
             </div> 
+            
             <Form.Group className='Email'>
                  <Form.Label htmlFor='InputEmail' className='LoginItem'>Email</Form.Label>
                  <Form.Control type='email' id='InputEmail' placeholder='example@nickface.com' className='Input'/><br />

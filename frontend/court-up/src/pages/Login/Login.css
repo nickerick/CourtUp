@@ -1,3 +1,4 @@
+/* Variables */
 :root{
     --accent-1: #FF5814;
     --accent-2: #565656;
@@ -8,14 +9,14 @@
     --text-2: #B8b8b8;
 
 }
-
-
-
+/* Main Body */
 .PageBody{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* Form Card */
 .FormBody{
     background-color: var(--background);
     color: var(--text-1);
@@ -25,9 +26,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: left;
-    width: 620px;
-    height: 680px;
-    margin: 50px ;
+    width: 550px;
+    height: 600px;
+    margin: 100px ;
     padding: 60px 100px;
     
 }
@@ -41,10 +42,56 @@
 
 .Input{
     background-color: var(--text-2);
+    border: var(--text-2);
 }
 
+.Input:focus{
+color: var(--background);
+background-color: var(--text-2);
+box-shadow: 0px 0px 0px var(--accent-3) inset, 5px 5px 0px var(--accent-3);
+}
+
+.LoginItem{
+    margin-bottom: 0;
+}
+/* Email Box*/
+.Email{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Password Box */
+.Password{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .ForgotPass{
     color: var(--accent-1);
+}
+
+/* Submit Box */
+.Submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LoginButton{
+    width: 100%;
+    background-color: var(--accent-1);
+    border-color: var(--accent-1);
+}
+
+.LoginButton:active{
+    background-color: var(--text-2) !important;
+    border-color: var(--text-2) !important;
+}
+
+.LoginButton:hover{
+    background-color: var(--accent-3);
+    border-color: var(--accent-3);
 }
 
 .CreateAccount{

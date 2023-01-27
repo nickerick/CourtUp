@@ -5,6 +5,7 @@
     --accent-4: #484848;
     --text-1: #FFFFFF;
     --background: #1B1B1B;
+    --text-2: #B8b8b8;
 }
 
 .HomeBody{
@@ -54,8 +55,8 @@
 
 
 .btnHomeBody:active{
-    background-color: var(--text-1) !important;
-    color: var(--background) !important;
+    background-color: var(--text-2) !important;
+    color: var(--text-2) !important;
 }
 
 .btnHomePrimary:hover{

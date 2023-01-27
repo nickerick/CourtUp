@@ -14,17 +14,17 @@ function LoginPage(props) {
             
             <Form.Group className='Email'>
                  <Form.Label htmlFor='InputEmail' className='LoginItem'>Email</Form.Label>
-                 <Form.Control type='email' id='InputEmail' placeholder='example@nickface.com' className='Input'/><br />
+                 <Form.Control type='email' id='InputEmail' placeholder='example@nickface.com' className='Input'/>
             </Form.Group>
 
             <Form.Group className='Password'>
                      <Form.Label htmlFor='InputPassword' className='LoginItem'>Password</Form.Label>
                      <div className='ForgotPass'>Forgot Password?</div>
-                     <input type='password' id='InputPassword' placeholder='example' className='form-control Input'/>
+                     <Form.Control type='password' id='InputPassword' placeholder='example' className='Input'/>
             </Form.Group>
                
-            <Form.Group>
-                    <Button type='submit'>Submit</Button>
+            <Form.Group className='Submit'>
+                    <br /><Button type='submit' className='LoginButton'>Sign In</Button> 
                 <div className= 'CreateAccount'>Don't Have An Account?</div>
             </Form.Group> 
           

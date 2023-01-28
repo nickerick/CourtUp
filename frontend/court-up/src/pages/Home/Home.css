@@ -1,11 +1,11 @@
 :root{
     --accent-1: #FF5814;
     --accent-2: #565656;
-    --accent-3: #d54912;
-    --accent-4: #484848;
+    --accent-1-dark: #d54912;
+    --accent-2-dark: #484848;
     --text-1: #FFFFFF;
-    --background: #1B1B1B;
     --text-2: #B8b8b8;
+    --background: #1B1B1B;
 }
 
 .HomeBody{
@@ -60,11 +60,11 @@
 }
 
 .btnHomePrimary:hover{
-    background-color: var(--accent-3);
+    background-color: var(--accent-1-dark);
 }
 
 .btnHomeSecondary:hover{
-    background-color: var(--accent-4);
+    background-color: var(--accent-2-dark);
 }
 
 .PageBody{

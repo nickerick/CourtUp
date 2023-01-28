@@ -2,14 +2,14 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 
-import './Login.css';
+import './SignUp.css';
 
-function LoginPage(props) {
+function SignUpPage(props) {
     return (
         <Container className='PageBody'>
         <Form className='FormBody'>
             <div>
-                 <h1 className='FormTitle'>Login</h1>
+                 <h1 className='FormTitle'>Sign Up</h1>
             </div> 
             
             <Form.Group className='Email'>
@@ -24,8 +24,8 @@ function LoginPage(props) {
             </Form.Group>
                
             <Form.Group className='Submit'>
-                    <br /><Button type='submit' className='LoginButton'>Sign In</Button> 
-                <a href='SignUp' className= 'CreateAccount'>Don't Have An Account?</a>
+                    <br /><Button type='submit' className='LoginButton'>Sign Up</Button> 
+                <a href='Login' className= 'CreateAccount'>Already Have An Account?</a>
             </Form.Group> 
           
         </Form>
@@ -33,4 +33,4 @@ function LoginPage(props) {
     )
 }
 
-export default LoginPage;
+export default SignUpPage;

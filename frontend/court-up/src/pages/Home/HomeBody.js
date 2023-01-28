@@ -25,7 +25,6 @@ function HomeBody(props) {
         
               <Card className='HomeBody'>
                 <Card.Body className='Card'>
-                    <h1>{testMsg}</h1>
                     <Card.Title className='CardTitle mb-5'>Welcome to <span>CourtUp</span></Card.Title>
                     <Card.Text className='my-5'>
                     Find, rate, and play at basketball courts across the globe!

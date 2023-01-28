@@ -1,11 +1,3 @@
-:root{
-    --accent-1: #FF5814;
-    --accent-2: #565656;
-    --accent-3: #d54912;
-    --accent-4: #484848;
-    --text-1: #FFFFFF;
-    --background: #1B1B1B;
-}
 
 .HomeNavbar{
     background-color: var(--background);
@@ -38,7 +30,7 @@
 }
 
 .NavLinks:hover{
-    color: var(--text-1);
+    color: var(--accent-1-dark);
 }
 
 .Link:focus{
@@ -58,12 +50,12 @@
 }
 
 .btnNav:active{
-    background-color: var(--text-1) !important;
+    background-color: var(--text-2) !important;
     color: var(--background) !important;
 }
 
 .btnNav:hover{
-    background: var(--accent-3);
+    background: var(--accent-1-dark);
     color: var(--background);
 }
 

@@ -16,7 +16,7 @@ function HomeNavbar(props) {
                     <Nav.Link className='Link' href="#action2">About</Nav.Link>
                  </Container>
             </div>
-                <Button className='btnNav' href='login'>Sign In</Button>
+                <Button className='btnNav btnPrimary' href='login'>Sign In</Button>
         </Navbar>
     )
 }

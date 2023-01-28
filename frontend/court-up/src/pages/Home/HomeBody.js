@@ -29,8 +29,8 @@ function HomeBody(props) {
                     <Card.Text className='my-5'>
                     Find, rate, and play at basketball courts across the globe!
                     </Card.Text>
-                    <Button  className='btnHomePrimary btnHomeBody mt-5 mb-1' onClick={testDb}> Courts Near Me</Button>
-                    <Button  className= 'btnHomeSecondary btnHomeBody my-3 '>Search Courts</Button>
+                    <Button  className='btnPrimary btnHomeBody mt-5 mb-1' onClick={testDb}> Courts Near Me</Button>
+                    <Button  className= 'btnSecondary btnHomeBody my-3 '>Search Courts</Button>
                 </Card.Body>
                 </Card>
     )

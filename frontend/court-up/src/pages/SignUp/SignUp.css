@@ -1,0 +1,102 @@
+/* Main Body */
+.PageBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Card */
+.FormBody{
+    background-color: var(--background);
+    color: var(--text-1);
+    border-radius: 39px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    width: 550px;
+    height: 600px;
+    margin: 100px ;
+    padding: 60px 100px;
+    
+}
+
+.FormTitle{
+    color: var(--text-1);
+    font-size: 64px;
+    font-weight: 15;
+    letter-spacing: 3px;
+}
+
+.Input{
+    background-color: var(--text-2);
+    border: var(--text-2);
+}
+
+.Input:focus{
+color: var(--background);
+background-color: var(--text-2);
+box-shadow: 0px 0px 0px var(--accent-1-dark) inset, 5px 5px 0px var(--accent-1-dark);
+}
+
+.LoginItem{
+    margin-bottom: 0;
+}
+
+
+/* Email Box*/
+.Email{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Password Box */
+.Password{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ForgotPass{
+    color: var(--accent-1);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.ForgotPass:hover{
+    color: var(--text-1);
+}
+
+/* Submit Box */
+.Submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LoginButton{
+    width: 100%;
+    background-color: var(--accent-1);
+    border-color: var(--accent-1);
+}
+
+.LoginButton:active{
+    background-color: var(--text-2) !important;
+    border-color: var(--text-2) !important;
+}
+
+.LoginButton:hover{
+    background-color: var(--accent-1-dark);
+    border-color: var(--accent-1-dark);
+}
+
+.CreateAccount{
+    font-size: 14px;
+    color: var(--text-2);
+    text-decoration: none;
+}
+
+.CreateAccount:hover{
+    color: var(--text-1);
+}

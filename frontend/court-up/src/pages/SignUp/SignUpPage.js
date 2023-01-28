@@ -19,13 +19,12 @@ function SignUpPage(props) {
 
             <Form.Group className='Password'>
                      <Form.Label htmlFor='InputPassword' className='LoginItem'>Password</Form.Label>
-                     <a href='ForgotPassword' className='ForgotPass'>Forgot Password?</a>
                      <Form.Control type='password' id='InputPassword' placeholder='example' className='Input'/>
             </Form.Group>
                
             <Form.Group className='Submit'>
                     <br /><Button type='submit' className='LoginButton'>Sign Up</Button> 
-                <a href='Login' className= 'CreateAccount'>Already Have An Account?</a>
+                <a href='login' className= 'LoginAccount'>Already Have An Account?</a>
             </Form.Group> 
           
         </Form>

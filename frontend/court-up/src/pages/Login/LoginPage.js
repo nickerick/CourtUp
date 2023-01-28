@@ -25,7 +25,7 @@ function LoginPage(props) {
                
             <Form.Group className='Submit'>
                     <br /><Button type='submit' className='LoginButton'>Sign In</Button> 
-                <a href='SignUp' className= 'CreateAccount'>Don't Have An Account?</a>
+                <a href='signup' className= 'CreateAccount'>Don't Have An Account?</a>
             </Form.Group> 
           
         </Form>

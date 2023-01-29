@@ -37,3 +37,4 @@ application.log
 application.log*
 static/
 .env
+application-dev.properties

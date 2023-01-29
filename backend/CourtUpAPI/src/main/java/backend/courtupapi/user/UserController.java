@@ -41,14 +41,14 @@ public class UserController  {
         User requestedUser = userRepository.findByEmail(userAccessForm.getEmail());
 
         if (requestedUser == null) {
-            return new ResponseEntity<>("Invalid Credentials", HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>("{\"msg\": \"invalid\"}", HttpStatus.UNAUTHORIZED);
         }
 
         if (!PasswordUtility.comparePasswords(requestedUser.getPassword(), requestedUser.getPassSalt(), userAccessForm.getPassword())) {
-            return new ResponseEntity<>("Invalid pas", HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>("{\"msg\": \"invalid\"}", HttpStatus.UNAUTHORIZED);
         }
 
-        return new ResponseEntity<>("{\"msg\": \"bruh\"}", HttpStatus.OK);
+        return new ResponseEntity<>("{\"msg\": \"success\"}", HttpStatus.OK);
     }
 
 }

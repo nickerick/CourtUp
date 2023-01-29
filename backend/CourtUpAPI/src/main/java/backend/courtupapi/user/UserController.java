@@ -1,9 +1,9 @@
 package backend.courtupapi.user;
 
+import backend.courtupapi.ResponseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,17 +14,17 @@ public class UserController  {
     UserRepository userRepository;
 
     @PostMapping("/user")
-    public ResponseEntity<String> createUser(@RequestBody UserAccessForm userAccessForm) {
+    public ResponseEntity<ResponseMessage> createUser(@RequestBody UserAccessForm userAccessForm) {
         if (userRepository.findByEmail(userAccessForm.getEmail()) != null) {
-            return new ResponseEntity<>("Email already exists.", HttpStatus.CONFLICT);
+            return new ResponseEntity<>(new ResponseMessage("Email already exists."), HttpStatus.CONFLICT);
         }
 
         if (userRepository.findByUsername(userAccessForm.getUsername()) != null) {
-            return new ResponseEntity<>("Username already exists.", HttpStatus.CONFLICT);
+            return new ResponseEntity<>(new ResponseMessage("Username already exists."), HttpStatus.CONFLICT);
         }
 
         if (userAccessForm.getEmail() == null || userAccessForm.getUsername() == null || userAccessForm.getPassword() == null) {
-            return new ResponseEntity<>("Missing fields.", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(new ResponseMessage("Incomplete request form."), HttpStatus.BAD_REQUEST);
         }
 
         // Salting + Hashing password
@@ -33,22 +33,22 @@ public class UserController  {
         User newUser = new User(userAccessForm.getEmail(), userAccessForm.getUsername(), passwordInfo[0], passwordInfo[1]);
         userRepository.save(newUser);
 
-        return new ResponseEntity<>("user " + newUser.getId() + " created.", HttpStatus.OK);
+        return new ResponseEntity<>(new ResponseMessage("User " + newUser.getUsername() + " was created."), HttpStatus.OK);
     }
 
     @PostMapping("/user/login")
-    public ResponseEntity<String> login(@RequestBody UserAccessForm userAccessForm) {
+    public ResponseEntity<ResponseMessage> login(@RequestBody UserAccessForm userAccessForm) {
         User requestedUser = userRepository.findByEmail(userAccessForm.getEmail());
 
         if (requestedUser == null) {
-            return new ResponseEntity<>("Invalid Credentials", HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(new ResponseMessage("Invalid Credentials"), HttpStatus.UNAUTHORIZED);
         }
 
         if (!PasswordUtility.comparePasswords(requestedUser.getPassword(), requestedUser.getPassSalt(), userAccessForm.getPassword())) {
-            return new ResponseEntity<>("Invalid pas", HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(new ResponseMessage("Invalid Credentials"), HttpStatus.UNAUTHORIZED);
         }
 
-        return new ResponseEntity<>("{\"msg\": \"bruh\"}", HttpStatus.OK);
+        return new ResponseEntity<>(new ResponseMessage("Successful login."), HttpStatus.OK);
     }
 
 }

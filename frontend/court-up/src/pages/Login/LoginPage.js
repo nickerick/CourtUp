@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import UserService from '../../services/UserService';
+
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
@@ -5,6 +8,22 @@ import Button from 'react-bootstrap/Button';
 import './Login.css';
 
 function LoginPage(props) {
+
+    const [inputEmail, setInputEmail] = useState("");
+    const [inputPass, setInputPass] = useState("");
+
+    const loginFunc = () => {
+        UserService.UserLogin(inputEmail,inputPass);
+    }
+
+    const EmailHandler = event => {
+        setInputEmail(event.target.value);
+     };
+
+    const PassHandler = event => {
+        setInputPass(event.target.value);
+     };
+    
     return (
         <Container className='PageBody'>
         <Form className='LoginFormBody'>
@@ -12,21 +31,21 @@ function LoginPage(props) {
                  <h1 className='FormTitle'>Login</h1>
             </div> 
             
-            <Form.Group className='Email'>
+            <section className='Email'>
                  <Form.Label htmlFor='InputEmail' className='LoginItem'>Email</Form.Label>
-                 <Form.Control type='email' id='InputEmail' className='Input'/>
-            </Form.Group>
+                 <Form.Control onChange={EmailHandler} name='EmailInput'  type='email' id='InputEmail' className='Input'/>
+            </section>
 
-            <Form.Group className='Password'>
+            <section className='Password'>
                      <Form.Label htmlFor='InputPassword' className='LoginItem'>Password</Form.Label>
                      <a href='ForgotPassword' className='ForgotPass'>Forgot Password?</a>
-                     <Form.Control type='password' id='InputPassword' className='Input'/>
-            </Form.Group>
+                     <Form.Control onChange={PassHandler} type='password' id='InputPassword' className='Input'/>
+            </section>
                
-            <Form.Group className='Submit'>
-                    <br /><Button type='submit' className='LoginButton btnPrimary'>Sign In</Button> 
+            <section className='Submit'>
+                    <br /><Button className='LoginButton btnPrimary' onClick={loginFunc}>Sign In</Button> 
                 <a href='signup' className= 'AccountChange'>Don't Have An Account?</a>
-            </Form.Group> 
+            </section> 
           
         </Form>
         </Container>

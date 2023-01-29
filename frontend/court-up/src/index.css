@@ -1,3 +1,13 @@
+:root{
+  --accent-1: #FF5814;
+  --accent-2: #565656;
+  --accent-1-dark: #d54912;
+  --accent-2-dark: #484848;
+  --text-1: #FFFFFF;
+  --text-2: #B8b8b8;
+  --background: #1B1B1B;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -7,4 +17,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.PageBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnPrimary{
+  background-color: var(--accent-1); 
+  color: var(--text-1) ;
+  border: none;
+}
+
+.btnSecondary{
+  background-color: var(--accent-2);
+  color: var(--text-1) ;
+  border: none;
+}
+
+.btnPrimary:hover{
+  background-color: var(--accent-1-dark);
+}
+
+.btnSecondary:hover{
+  background-color: var(--accent-2-dark);
+}
+
+.btnPrimary:active{
+  background-color: var(--text-2)!important;
+  color: var(--text-2)!important;
+}
+
+.btnSecondary:active{
+  background-color: var(--text-2)!important;
+  color: var(--text-2)!important;
 }

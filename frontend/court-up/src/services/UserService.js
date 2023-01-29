@@ -8,6 +8,7 @@ const UserService = {
         });
 
         const resp = await response.json()
+        console.log(resp)
     },
 
 }

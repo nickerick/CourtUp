@@ -13,11 +13,14 @@ function LoginPage(props) {
     const [inputEmail, setInputEmail] = useState("");
     const [inputPass, setInputPass] = useState("");
     const navigate = useNavigate();
+    const incorrectLabel = document.getElementsByClassName("Incorrect");
 
     const loginFunc = async () => {
         var LoginSuccess = await UserService.UserLogin(inputEmail,inputPass);
         if (LoginSuccess){
             navigate('/courts');
+        }else{
+           incorrectLabel[0].style.display="contents";
         }
            
     }
@@ -36,7 +39,7 @@ function LoginPage(props) {
             <div>
                  <h1 className='FormTitle'>Login</h1>
             </div> 
-            
+            <div className='Incorrect'>Your email or password is incorrect.</div>
             <section className='Email'>
                  <Form.Label htmlFor='InputEmail' className='LoginItem'>Email</Form.Label>
                  <Form.Control onChange={EmailHandler} name='EmailInput'  type='email' id='InputEmail' className='Input'/>

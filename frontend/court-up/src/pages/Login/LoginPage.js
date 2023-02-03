@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import UserService from '../../services/UserService';
+import {useNavigate} from "react-router-dom"
 
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
@@ -11,9 +12,14 @@ function LoginPage(props) {
 
     const [inputEmail, setInputEmail] = useState("");
     const [inputPass, setInputPass] = useState("");
+    const navigate = useNavigate();
 
-    const loginFunc = () => {
-        UserService.UserLogin(inputEmail,inputPass);
+    const loginFunc = async () => {
+        var LoginSuccess = await UserService.UserLogin(inputEmail,inputPass);
+        if (LoginSuccess){
+            navigate('/courts');
+        }
+           
     }
 
     const EmailHandler = event => {

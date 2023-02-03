@@ -6,9 +6,11 @@ const UserService = {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email: email, password: pass})
         });
-
+    
+        // console.log(response.status)
         const resp = await response.json()
         console.log(resp)
+        return response.status === 200;
     },
 
 }

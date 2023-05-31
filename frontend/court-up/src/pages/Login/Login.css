@@ -83,3 +83,8 @@ box-shadow: 0px 0px 0px var(--accent-1-dark) inset, 5px 5px 0px var(--accent-1-d
 .AccountChange:hover{
     color: var(--text-1);
 }
+
+#Incorrect{
+    color: red;
+    display: none;
+}

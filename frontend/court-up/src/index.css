@@ -54,3 +54,20 @@ code {
   background-color: var(--text-2)!important;
   color: var(--text-2)!important;
 }
+
+.btnPrimary:focus{
+  background: var(--accent-1-dark);
+  color: var(--text-2);
+  box-shadow: none;
+}
+
+.btnSecondary:focus{
+  background: var(--accent-2-dark);
+  color: var(--text-2);
+  box-shadow: none;
+}
+
+::selection{
+  background: var(--accent-2);
+  color: var(--text-1);
+}

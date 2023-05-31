@@ -11,30 +11,30 @@ function SignUpPage(props) {
             <div>
                  <h1 className='FormTitle'>Sign Up</h1>
             </div> 
-            <Form.Group className='Username'>
+            <section className='Username'>
                  <Form.Label htmlFor='InputUsername' className='LoginItem'>Username</Form.Label>
                  <Form.Control type='text' id='InputUsername' className='Input'/>
-            </Form.Group>
+            </section>
 
-            <Form.Group className='Email'>
+            <section className='Email'>
                  <Form.Label htmlFor='InputEmail' className='LoginItem'>Email</Form.Label>
                  <Form.Control type='email' id='InputEmail' className='Input'/>
-            </Form.Group>
+            </section>
 
-            <Form.Group className='Password'>
+            <section className='Password'>
                      <Form.Label htmlFor='InputPassword' className='LoginItem'>Password</Form.Label>
                      <Form.Control type='password' id='InputPassword' className='Input'/>
-            </Form.Group>
+            </section>
 
-            <Form.Group className='Password'>
+            <section className='Password'>
                      <Form.Label htmlFor='ConfirmPassword' className='LoginItem'>Confirm Password</Form.Label>
                      <Form.Control type='password' id='ConfirmPassword' className='Input'/>
-            </Form.Group>
+            </section>
                
-            <Form.Group className='Submit'>
-                    <br /><Button type='submit' className='LoginButton btnPrimary'>Sign Up</Button> 
+            <section className='Submit'>
+                    <br /><Button className='LoginButton btnPrimary'>Sign Up</Button> 
                 <a href='login' className= 'AccountChange'>Already Have An Account?</a>
-            </Form.Group> 
+            </section> 
           
         </Form>
         </Container>
